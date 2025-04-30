@@ -117,11 +117,86 @@ li{
   justify-items: center;
 }
 
-
 .pictureOfMe{
     border-radius: 75%;
     border: solid 1px black;
+    height: 200px;
+    width:200px;
     
 }
+
+/*------- Responsive Images -------*/
+img{
+  width: 100%;
+
+}
+/*-----------------------------------
+      CSS GRID RULES
+-----------------------------------*/
+.container {
+  display: grid;
+}
+
+/*------------------------------------
+       Tablet Media Query 
+------------------------------------*/
+@media screen and (min-width: 764px) {
+  .header,
+  .main-nav {
+      display: flex;
+  }
+
+  .header{
+      flex-direction: column;
+      align-items: center;
+      .header{
+          width: 80%;
+          margin: 0 auto;
+          max-width: 1150px;
+      }
+  }
+  #hero{
+      min-height: 500px;
+  }
+  .hero h2 {
+      font-size: 2.1rem;
+  }
+
+  .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(230px, 1fr));
+      grid-gap: 20px;
+      padding: 20px;
+  }
+}
+/*------ End of Tablet Media Query ------*/
+
+
+
+/*------ Desktop Media Query --------*/
+  @media screen and (min-width: 1280px){
+
+  .header{
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .hero h2{
+      font-size: 4rem;
+      text-align: center;
+  }
+  #hero{
+      min-height: 800px;
+  }
+
+  .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(230px, 1fr));
+      grid-gap: 20px;
+      padding: 20px;
+  }
+
+}
+/*------ End Desktop Media Query-----*/
 
 
